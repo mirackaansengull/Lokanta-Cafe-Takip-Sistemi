@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="musteri.css">  <!-- CSS dosyasına doğru bağlandığınızdan emin olun -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script> <!-- JQuery -->
+    <script src="menu.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Lokanta</div>
+        <div class="menu-links">
+            <a href="/210707068_MiraçKaanŞengül/login.html">Login</a>
+            <a href="#hakkimizda">Hakkımızda</a>
+            <a href="#iletisim">İletişim</a>
+        </div>
+    </div>
+    <div class="renk">
+        <h1>Çorbalar</h1>
+    <div class="tablo"  id="corbalar"></div>
+    </div>
+    
+    <div class="renk">
+        ,<h1>Ara Sıcaklar</h1>
+        <div class="tablo"  id="arasicaklar"></div>
+    </div>   
+    
+    <div class="renk">
+        <h1>Kebaplar</h1>
+    <div class="tablo"  id="kebaplar"></div>  
+    </div>
+      
+    <div class="renk">
+        <h1>Hamburgeler</h1>
+    <div class="tablo"  id="hamburgerler"></div> 
+    </div>
+    
+    <div class="renk">
+        <h1>Pizzalar</h1>
+    <div class="tablo"  id="pizzalar"></div>   
+    </div>
+
+    <div class="renk">
+        <h1>Tatlılar</h1>
+    <div class="tablo"  id="tatlilar"></div>  
+    </div>
+     
+    <div class="renk">
+        <h1>İçecekler</h1>
+    <div class="tablo"  id="icecekler"></div>
+
+    <div class="renk">
+        <h1>Kahveler</h1>
+    <div class="tablo"  id="kahveler"></div>
+    </div>
+    
+
+    <div id="siparisler">
+        <h2>Siparişler</h2>
+        <div id="siparis-listesi">
+        </div> <!-- Siparişler burada listelenecek -->
+        <div id="siparis-onay">
+            <div id="toplam-fiyat">
+                Toplam: <span id="toplam-tutar">0</span> TL  
+            </div>
+                <button id="iptal" onclick="siparisSil()">Sipariş İptal</button>
+                <label id="masano">Masa No:</label>
+                <select id="masasecim" name="masa">
+                  <option value="masa1">Masa 1</option>
+                  <option value="masa2">Masa 2</option>
+                  <option value="masa3">Masa 3</option>
+                  <option value="masa4">Masa 4</option>
+                  <option value="masa5">Masa 5</option>
+                </select>
+                <button id="onayla" onclick="siparisKaydet()">Onayla</button>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+</body>
+</html>

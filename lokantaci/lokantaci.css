@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom,#0c1e3d, rgb(180, 180, 180));
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1.5% 3%;
+}
+
+
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 2.5% 15px;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 7px;
+    background-color: #014a89a9;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar #musteribilgisi{
+    display: inline-block; 
+    padding: 0%; 
+    padding-left: 10px;   
+    padding-right: 10px;             
+    margin: 0;  
+    color: black;
+    background-color: rgb(201, 201, 201);
+    text-align: center;
+    border-radius: 20px;
+    
+}
+
+.siparisler{
+    padding: 50px;
+    margin: 30%;
+    margin-top: 1%;
+    background-color: #ffffff13;
+    width: 40%;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center; /* Yatayda ortalama */
+    align-items: center;    /* Dikeyde ortalama */
+    flex-direction: column;
+}
+
+
+.siparisler h1{
+    margin-left: 3%;
+}
+
+
+.siparisler .masalar-con{
+    padding:3%;
+    margin-bottom: 3%;
+    margin-top: 5%;
+    background-color: #ddd;
+    border-radius: 40px ;
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.siparisler .masalar-con:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.siparisler .masalar-con .yatay .para{
+    padding: 2%;
+    border-top: 1px solid black;
+}
+
+.siparisler .masalar-con .yatay .odeme{
+    margin-top:5% ;
+    padding: 1.5%;
+    border-radius: 40px;
+    float: right;
+    background-color: #014a89a9;
+    color: #ddd;
+    transition: all 0.5s ease;
+    border: none;
+    
+}
+
+.siparisler .masalar-con .yatay .odeme:hover{
+    background-color: #0c1e3d;
+    color: white;
+    cursor: pointer;    
+   
+}
+
+.siparisler .masalar-con .tablo{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.siparisler .masalar-con .tablo .menu-item-content{
+    display: flex;
+    flex-direction: row;
+    
+}
+.siparisler .masalar-con .tablo .menu-item-content p{
+    margin-left: 3%;
+    
+}
+
+

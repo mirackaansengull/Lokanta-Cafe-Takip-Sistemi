@@ -1,0 +1,387 @@
+/* Temel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom,#0c1e3d, rgb(107, 107, 107));
+}
+
+/* Navbar stilleri */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1.5% 3%;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 2.5% 15px;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 7px;
+    background-color: #014a89a9;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Başlık stilleri */
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.renk{
+    background-color: #d4d4d428;
+    padding-top: 5px;
+    border-radius: 40px;
+}
+.tablo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.menu-item-content p{
+    margin-left: 30px;
+}
+
+.menu-item-text {
+    flex: 1;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.menu-item-text h2 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.menu-item-text h3 {
+    margin: 0;
+    color: #666;
+}
+
+.menu-item-image {
+    width: 50%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.menu-item-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ekleme butonu stilleri */
+.ekleme {
+    height: 50px;
+    width: 8%;
+    margin-left: 20px;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #fff;
+    border: none;
+    background-color: #014a89a9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ekleme:hover {
+    transform: scale(1.1);
+    background-color: #014989;
+}
+
+/* Siparişler paneli stilleri */
+#siparisler {
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+    background-color: white;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    width: 50%;
+    height: 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 40px ;
+    display: flex;
+    flex-direction: column; /* Dikey düzen için eklendi */
+}
+
+#siparisler h2 {
+    color: #333;
+    width: 100%; /* Tam genişlik için eklendi */
+}
+
+#siparisler.acik {
+    height: 50%;
+    width: 50%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#siparisler.sonraki-kapanma {
+    margin-bottom: 0.5%;
+    height: 5%;
+    width: 10%;
+    padding: 0;
+    background-color: #014989;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+#siparisler.sonraki-kapanma h2 {
+    text-align: center;
+    margin-top: 8%;
+    font-size: large;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+#siparisler.sonraki-kapanma #siparis-listesi,
+#siparisler.sonraki-kapanma #toplam-fiyat {
+    display: none;
+}
+
+#siparisler:hover {
+    
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 50%;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    overflow-y: auto;
+}
+
+#siparisler:hover h2 {
+    text-align: left;
+    font-size: 24px;
+    margin: 15px 0;
+    color: #333;
+}
+
+#siparisler:hover #siparis-listesi,
+#siparisler:hover #toplam-fiyat {
+    display: block;
+}
+
+/* Sipariş listesi stilleri */
+#siparis-listesi {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Tam genişlik için eklendi */
+}
+
+.siparis-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.siparis-item span {
+    margin: 0 10px;
+    flex: 1;
+}
+
+.siparis-item button {
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #014a89a9;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.siparis-item button:hover {
+    background-color: #014989;
+}
+
+.adet-gosterge {
+    min-width: 30px;
+    text-align: center;
+}
+
+#siparis-onay {
+    display: flex;
+    flex-direction: row;
+}
+
+#siparis-onay #toplam-fiyat {
+    margin-top: 20px;
+    padding: 15px 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    width: 100%; /* Tam genişlik için eklendi */
+}
+
+#siparis-onay label{
+    margin-top: 25px;
+    font-size: 18px;
+    width: 15%;
+}
+
+#siparis-onay select{
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 50%;
+    width: 20%;
+    transition: all 0.5s ease;
+    border-radius: 40px;
+    border: 1px solid black;
+    font-size: 18px;
+}
+
+#siparis-onay select:hover{
+    margin-top: 20px;
+    margin-right: 20px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+#siparis-onay select:focus{
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    
+}
+
+#siparis-onay #iptal{
+    display: none;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-right: 3%;
+    height: 60%;
+    width: 20%;
+    background-color: #0783ef;
+    border: none;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    
+}
+
+#siparis-onay #iptal:hover{
+    transition: background-color 0.5s ease;
+    background-color: #013461 ;
+    cursor: pointer;
+    
+}
+
+
+    
+
+#siparis-onay #onayla{
+    border-radius: 40px;
+    margin-top: 20px;
+    height: 60%;
+    width: 10%;
+    background-color: #0783ef;
+    border: none;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+#siparis-onay #onayla:hover{
+    transition: background-color 0.5s ease;
+    background-color: #013461 ;
+    cursor: pointer;
+
+}
+
+
+/* Responsive tasarım */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar a {
+        width: 100%;
+        margin: 5px 0;
+        padding: 10px;
+    }
+
+    .menu-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .menu-item-content {
+        flex-direction: column;
+    }
+
+    .menu-item-text,
+    .menu-item-image {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .ekleme {
+        width: 40px;
+        height: 40px;
+    }
+
+    #siparisler,
+    #siparisler.acik,
+    #siparisler:hover {
+        width: 90%;
+        right: 5%;
+    }
+
+    #siparisler.sonraki-kapanma {
+        width: 100px;
+        right: 5%;
+    }
+}
